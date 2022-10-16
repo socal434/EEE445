@@ -1,0 +1,19 @@
+<!DOCTYPE Materials>
+<Materials>
+    <Conductors>
+        <Conductor imag="" real="5.8e7 Siemens/m" mur_real="1" electron_path="" parmtype="1" tc1="" name="Copper" thermal_conductivity_in_z="" mur_imag="" heat_capacity="2.49E+06" tnom="" thermal_conductivity="401" tc2=""/>
+        <Conductor imag="" real="0.71e7 Siemens/m" mur_real="1" electron_path="" parmtype="1" tc1="" name="Typical_solder" thermal_conductivity_in_z="" mur_imag="" heat_capacity="" tnom="" thermal_conductivity="" tc2=""/>
+    </Conductors>
+    <Dielectrics>
+        <Dielectric highfreq="1 THz" mur_real="1" electron_path="" name="FR_4_Core" thermal_conductivity_in_z="" er_imag="" mur_imag="" loss_type="1" valuefreq="1 GHz" heat_capacity="" thermal_conductivity="" er_real="4.6" er_loss="0.01" lowfreq="1 KHz"/>
+        <Dielectric highfreq="1 THz" mur_real="1" electron_path="" name="FR_4_Prepreg" thermal_conductivity_in_z="" er_imag="" mur_imag="" loss_type="1" valuefreq="1 GHz" heat_capacity="" thermal_conductivity="" er_real="4.6" er_loss="0.01" lowfreq="1 KHz"/>
+        <Dielectric highfreq="1 THz" mur_real="1" electron_path="" name="SolderMask" thermal_conductivity_in_z="" er_imag="" mur_imag="" loss_type="1" valuefreq="1 GHz" heat_capacity="" thermal_conductivity="" er_real="3.3" er_loss="" lowfreq="1 KHz"/>
+        <Dielectric highfreq="1 THz" mur_real="1" electron_path="" name="Alumina" thermal_conductivity_in_z="" er_imag="" mur_imag="" loss_type="1" valuefreq="1 GHz" heat_capacity="1.73E+06" thermal_conductivity="25.25" er_real="9.6" er_loss="" lowfreq="1 KHz"/>
+        <Dielectric highfreq="1 THz" mur_real="1" electron_path="" name="Dielectric_1" thermal_conductivity_in_z="" er_imag="" mur_imag="" loss_type="1" valuefreq="1 GHz" heat_capacity="" thermal_conductivity="" er_real="1" er_loss="" lowfreq="1 KHz"/>
+        <Dielectric highfreq="1 THz" mur_real="1" electron_path="" name="Rogers_RO4003" thermal_conductivity_in_z="" er_imag="" mur_imag="" loss_type="1" valuefreq="10.0 GHz" heat_capacity="" thermal_conductivity="" er_real="3.55" er_loss="0.0022" lowfreq="1 KHz"/>
+    </Dielectrics>
+    <Semiconductors/>
+    <roughness>
+        <roughmodel bbase="" l3dpeaks="" modeltype="2" l3bbase="" name="Roughness_1" l2rough="" l2bbase="" l3rough="" l2dpeaks="" rough="1.6 um" dpeaks=""/>
+    </roughness>
+</Materials>
