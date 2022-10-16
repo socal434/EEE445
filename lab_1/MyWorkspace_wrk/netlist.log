@@ -1,0 +1,22 @@
+; Top Design: "MyLibrary_lib:Lab_1:schematic"
+; Netlisted using Hierarchy Policy: "Standard"
+
+Options ResourceUsage=yes UseNutmegFormat=no EnableOptim=no TopDesignName="MyLibrary_lib:Lab_1:schematic" DcopOutputNodeVoltages=yes DcopOutputPinCurrents=yes DcopOutputAllSweepPoints=no DcopOutputDcopType=0
+S_Param:SP1 CalcS=yes CalcY=no CalcZ=no GroupDelayAperture=1e-4 FreqConversion=no FreqConversionPort=1 StatusLevel=2 CalcNoise=no SortNoise=0 BandwidthForNoise=1.0 Hz DevOpPtLevel=0 \
+SweepVar="freq" SweepPlan="SP1_stim" OutputPlan="SP1_Output" 
+
+SweepPlan: SP1_stim Start=2.5 GHz Stop=10.0 GHz Step=10 MHz 
+
+OutputPlan:SP1_Output \
+      Type="Output" \
+      UseEquationNestLevel=yes \
+      EquationNestLevel=2 \
+      UseSavedEquationNestLevel=yes \
+      SavedEquationNestLevel=2
+
+#load "python","LinearCollapse"
+Component Module="LinearCollapse" Type="ModelExtractor" NetworkRepresentation=2
+Port:TermG1  N__0 0 Num=1 Z=50 Ohm Noise=yes 
+Port:TermG2  N__1 0 Num=2 Z=50 Ohm Noise=yes 
+MLIN2:TL1  N__0 N__1 Subst="MSub1"  W=0.435530 mm L=363.035000 mm Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+model MSub1 MSUB H=0.203 mm Er=3.55  Mur=1  Cond=5.813E7  Hu=3.93701e+34 mil T=18 um TanD=0.0021  Rough=1.6 um DielectricLossModel=1 FreqForEpsrTanD=1.0 GHz LowFreqForTanD=1.0 kHz HighFreqForTanD=1.0 THz RoughnessModel=2 
